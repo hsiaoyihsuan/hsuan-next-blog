@@ -1,10 +1,35 @@
-import Link from "next/link";
 import { ArticleCard } from "@/app/_components/article-card";
+import { Pagination } from "@/app/_components/pagination";
 import { SpriteImage } from "@/app/_components/sprite-image";
 import { articles } from "@/app/_data/articles";
+import Link from "next/link";
 
-export default function Home() {
-  const latestArticles = articles.slice(0, 3);
+const ARTICLES_PER_PAGE = 9;
+
+function parsePage(page: string | string[] | undefined, totalPages: number) {
+  const pageValue = Array.isArray(page) ? page[0] : page;
+  const parsedPage = Number(pageValue ?? 1);
+
+  if (!Number.isInteger(parsedPage) || parsedPage < 1) {
+    return 1;
+  }
+
+  return Math.min(parsedPage, totalPages);
+}
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string | string[] }>;
+}) {
+  const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
+  const { page } = await searchParams;
+  const currentPage = parsePage(page, totalPages);
+  const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+  const latestArticles = articles.slice(
+    startIndex,
+    startIndex + ARTICLES_PER_PAGE,
+  );
 
   return (
     <main className="min-h-screen bg-neutral-50 pb-28 text-neutral-950 md:pb-16">
@@ -49,10 +74,14 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {latestArticles.map((article) => (
-              <ArticleCard key={article.slug} article={article} compact />
-            ))}
+          <div className="space-y-6">
+            <div className="grid gap-5 md:grid-cols-3">
+              {latestArticles.map((article) => (
+                <ArticleCard key={article.slug} article={article} compact />
+              ))}
+            </div>
+
+            <Pagination currentPage={currentPage} totalPages={totalPages} />
           </div>
         </section>
       </section>
