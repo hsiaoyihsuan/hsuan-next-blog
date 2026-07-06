@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/app/_components/site-footer";
 import { SiteNavigation } from "@/app/_components/site-navigation";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <SiteNavigation placement="top" />
         {children}
+        <SiteFooter />
         <SiteNavigation placement="bottom" />
       </body>
     </html>
