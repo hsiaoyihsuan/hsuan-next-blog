@@ -121,11 +121,33 @@ const fakeArticleTopics = [
 
 const imagePositions = ["right top", "left bottom", "right bottom", "left top"] as const;
 
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+] as const;
+
+function getGeneratedArticleDate(index: number) {
+  const date = new Date(Date.UTC(2026, 3, 30));
+  date.setUTCDate(date.getUTCDate() - index * 14);
+
+  return `${monthNames[date.getUTCMonth()]} ${String(date.getUTCDate()).padStart(2, "0")}, ${date.getUTCFullYear()}`;
+}
+
 const generatedArticles: Article[] = fakeArticleTopics.map(
   ([slug, title, firstTag, secondTag], index) => ({
     slug,
     title,
-    date: `April ${String(30 - (index % 28)).padStart(2, "0")}, 2026`,
+    date: getGeneratedArticleDate(index),
     excerpt:
       "A placeholder article summary for testing the blog card layout, pagination rhythm, and archive density.",
     tags: [firstTag, secondTag],

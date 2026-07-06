@@ -1,5 +1,5 @@
-import { ArticleCard } from "@/app/_components/article-card";
 import { articles } from "@/app/_data/articles";
+import { ArchiveList } from "@/app/archive/_components/archive-list";
 
 export default function Archive() {
   return (
@@ -18,25 +18,7 @@ export default function Archive() {
           </p>
         </div>
 
-        <section aria-labelledby="all-articles" className="space-y-5">
-          <div className="flex items-end justify-between border-b border-neutral-200 pb-3">
-            <h2
-              id="all-articles"
-              className="text-2xl font-semibold text-neutral-950"
-            >
-              All Articles
-            </h2>
-            <p className="text-sm font-medium text-neutral-500">
-              {articles.length} drafts
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
-        </section>
+        <ArchiveList articles={articles} />
       </section>
     </main>
   );
