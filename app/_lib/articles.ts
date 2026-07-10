@@ -46,6 +46,10 @@ function assertStringArray(value: unknown, fieldName: string, slug: string) {
   return value;
 }
 
+function stripLeadingMarkdownH1(content: string) {
+  return content.replace(/^\s*#(?!#)\s+.+(?:\r?\n|$)/, "");
+}
+
 function parseArticle(slug: string, fileContent: string): MarkdownArticle {
   const { content, data } = matter(fileContent);
   const frontmatter = data as ArticleFrontmatter;
@@ -61,7 +65,7 @@ function parseArticle(slug: string, fileContent: string): MarkdownArticle {
     excerpt: assertString(frontmatter.excerpt, "excerpt", slug),
     tags: assertStringArray(frontmatter.tags, "tags", slug),
     coverImage,
-    content,
+    content: stripLeadingMarkdownH1(content),
   };
 }
 
