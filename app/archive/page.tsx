@@ -1,7 +1,9 @@
-import { articles } from "@/app/_data/articles";
+import { getAllArticleMetas } from "@/app/_lib/articles";
 import { ArchiveList } from "@/app/archive/_components/archive-list";
 
-export default function Archive() {
+export default async function Archive() {
+  const articles = await getAllArticleMetas();
+
   return (
     <main className="min-h-screen bg-neutral-50 pb-28 text-neutral-950 md:pb-16">
       <section className="mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-6 md:gap-10 md:px-8 md:pt-14">
@@ -13,8 +15,8 @@ export default function Archive() {
             Essays, notes, and engineering fieldwork.
           </h1>
           <p className="mt-4 max-w-xl text-base leading-7 text-neutral-600 md:mt-5 md:text-lg">
-            A preview of the article list layout. These placeholder articles
-            will be replaced with the real writing system later.
+            Browse the full collection of migrated notes, essays, and
+            engineering writeups.
           </p>
         </div>
 

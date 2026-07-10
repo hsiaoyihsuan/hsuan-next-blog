@@ -1,27 +1,27 @@
-import type { Article } from "@/app/_data/articles";
+import type { MarkdownArticleMeta } from "@/app/_lib/articles";
 import Link from "next/link";
 
 type ArchiveListProps = {
-  articles: Article[];
+  articles: MarkdownArticleMeta[];
 };
 
 type ArticleGroup = {
   year: number;
-  articles: Article[];
+  articles: MarkdownArticleMeta[];
 };
 
 function getTimestamp(date: string) {
   return new Date(date).getTime();
 }
 
-function groupArticlesByYear(articles: Article[]): ArticleGroup[] {
+function groupArticlesByYear(articles: MarkdownArticleMeta[]): ArticleGroup[] {
   const sortedArticles = [...articles].sort(
     (first, second) => getTimestamp(second.date) - getTimestamp(first.date),
   );
-  const groups = new Map<number, Article[]>();
+  const groups = new Map<number, MarkdownArticleMeta[]>();
 
   for (const article of sortedArticles) {
-    const year = new Date(article.date).getFullYear();
+    const year = new Date(article.date).getUTCFullYear();
     const yearArticles = groups.get(year) ?? [];
 
     yearArticles.push(article);
@@ -36,17 +36,17 @@ function groupArticlesByYear(articles: Article[]): ArticleGroup[] {
 
 function formatShortDate(date: string) {
   const parsedDate = new Date(date);
-  const month = String(parsedDate.getMonth() + 1).padStart(2, "0");
-  const day = String(parsedDate.getDate()).padStart(2, "0");
+  const month = String(parsedDate.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(parsedDate.getUTCDate()).padStart(2, "0");
 
   return `${month}/${day}`;
 }
 
 function formatMachineDate(date: string) {
   const parsedDate = new Date(date);
-  const year = parsedDate.getFullYear();
-  const month = String(parsedDate.getMonth() + 1).padStart(2, "0");
-  const day = String(parsedDate.getDate()).padStart(2, "0");
+  const year = parsedDate.getUTCFullYear();
+  const month = String(parsedDate.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(parsedDate.getUTCDate()).padStart(2, "0");
 
   return `${year}-${month}-${day}`;
 }
@@ -67,9 +67,7 @@ export function ArchiveList({ articles }: ArchiveListProps) {
 
           <div className="divide-y divide-neutral-200 border-b border-neutral-200">
             {group.articles.map((article) => (
-              <article
-                key={article.slug}
-              >
+              <article key={article.slug}>
                 <Link
                   href={`/articles/${article.slug}`}
                   prefetch={false}
@@ -86,16 +84,18 @@ export function ArchiveList({ articles }: ArchiveListProps) {
                     <h3 className="text-base font-semibold leading-snug text-neutral-950 transition-colors group-hover:text-neutral-600 md:text-lg">
                       {article.title}
                     </h3>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {article.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-neutral-200/70 px-2.5 py-1 text-xs font-medium text-neutral-600"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    {article.tags.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {article.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full bg-neutral-200/70 px-2.5 py-1 text-xs font-medium text-neutral-600"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </Link>
               </article>

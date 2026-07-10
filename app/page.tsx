@@ -1,7 +1,7 @@
 import { ArticleCard } from "@/app/_components/article-card";
 import { Pagination } from "@/app/_components/pagination";
-import { SpriteImage } from "@/app/_components/sprite-image";
-import { articles } from "@/app/_data/articles";
+import { getAllArticleMetas } from "@/app/_lib/articles";
+import Image from "next/image";
 import Link from "next/link";
 
 const ARTICLES_PER_PAGE = 9;
@@ -22,6 +22,7 @@ export default async function Home({
 }: {
   searchParams: Promise<{ page?: string | string[] }>;
 }) {
+  const articles = await getAllArticleMetas();
   const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
   const { page } = await searchParams;
   const currentPage = parsePage(page, totalPages);
@@ -36,10 +37,13 @@ export default async function Home({
       <section className="mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-6 md:gap-10 md:px-8 md:pt-14">
         <div className="grid gap-5 md:grid-cols-[280px_1fr] md:items-end md:gap-6">
           <div className="relative aspect-5/4 overflow-hidden rounded-lg bg-neutral-200 shadow-sm md:aspect-square">
-            <SpriteImage
+            <Image
+              src="/images/about/profile.jpeg"
               alt="Portrait of Hsuan"
-              position="left top"
-              className="h-full w-full"
+              fill
+              priority
+              sizes="(min-width: 768px) 280px, calc(100vw - 2.5rem)"
+              className="object-cover grayscale"
             />
           </div>
 

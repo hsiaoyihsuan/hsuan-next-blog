@@ -1,11 +1,21 @@
-import { SpriteImage } from "@/app/_components/sprite-image";
-import type { Article } from "@/app/_data/articles";
+import type { MarkdownArticleMeta } from "@/app/_lib/articles";
 import Link from "next/link";
 
+const DEFAULT_COVER_IMAGE = "/images/articles/default/default-article-cover.png";
+
 type ArticleCardProps = {
-  article: Article;
+  article: MarkdownArticleMeta;
   compact?: boolean;
 };
+
+function formatArticleDate(date: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(date));
+}
 
 export function ArticleCard({ article, compact = false }: ArticleCardProps) {
   return (
@@ -16,23 +26,35 @@ export function ArticleCard({ article, compact = false }: ArticleCardProps) {
         className="group block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
       >
         <div className="relative aspect-4/3 bg-neutral-200">
-          <SpriteImage
-            alt={article.alt}
-            position={article.imagePosition}
-            className="h-full w-full"
-          />
+          {article.coverImage ? (
+            <div
+              role="img"
+              aria-label={`Cover image for ${article.title}`}
+              className="h-full w-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${article.coverImage})` }}
+            />
+          ) : (
+            <div
+              role="img"
+              aria-label={`Default cover image for ${article.title}`}
+              className="h-full w-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${DEFAULT_COVER_IMAGE})` }}
+            />
+          )}
         </div>
         <div className="space-y-4 p-5">
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-500"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          {article.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {article.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-500"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
           <div className="space-y-2">
             <h3 className="text-lg font-semibold leading-snug text-neutral-950 transition-colors group-hover:text-neutral-600">
               {article.title}
@@ -44,7 +66,7 @@ export function ArticleCard({ article, compact = false }: ArticleCardProps) {
             )}
           </div>
           <div className="text-sm font-medium text-neutral-500">
-            <time>{article.date}</time>
+            <time dateTime={article.date}>{formatArticleDate(article.date)}</time>
           </div>
         </div>
       </Link>
