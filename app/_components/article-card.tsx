@@ -43,9 +43,8 @@ export function ArticleCard({ article, compact = false }: ArticleCardProps) {
               </p>
             )}
           </div>
-          <div className="flex items-center justify-between gap-4 text-sm font-medium text-neutral-500">
+          <div className="text-sm font-medium text-neutral-500">
             <time>{article.date}</time>
-            <span>{article.readTime}</span>
           </div>
         </div>
       </Link>

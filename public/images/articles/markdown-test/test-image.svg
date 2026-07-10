@@ -1,0 +1,13 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">Markdown image test placeholder</title>
+  <desc id="description">A simple monochrome placeholder image used to test Markdown article image rendering.</desc>
+  <rect width="1200" height="720" fill="#f5f5f5"/>
+  <rect x="48" y="48" width="1104" height="624" rx="24" fill="#ffffff" stroke="#d4d4d4" stroke-width="2"/>
+  <path d="M164 496L344 316L456 428L536 348L756 568H164V496Z" fill="#d4d4d4"/>
+  <circle cx="836" cy="228" r="76" fill="#a3a3a3"/>
+  <rect x="164" y="154" width="384" height="34" rx="17" fill="#171717"/>
+  <rect x="164" y="214" width="280" height="22" rx="11" fill="#737373"/>
+  <rect x="164" y="252" width="448" height="22" rx="11" fill="#d4d4d4"/>
+  <text x="164" y="628" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Markdown Image Test</text>
+  <text x="164" y="667" fill="#737373" font-family="Arial, Helvetica, sans-serif" font-size="22">public/images/articles/markdown-test/test-image.svg</text>
+</svg>

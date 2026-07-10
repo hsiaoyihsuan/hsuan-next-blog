@@ -4,7 +4,6 @@ export type Article = {
   date: string;
   excerpt: string;
   tags: string[];
-  readTime: string;
   imagePosition: string;
   alt: string;
 };
@@ -17,7 +16,6 @@ const featuredArticles: Article[] = [
     excerpt:
       "A practical look at keeping frontend systems understandable as products, teams, and requirements grow.",
     tags: ["Frontend", "Architecture"],
-    readTime: "8 min read",
     imagePosition: "right top",
     alt: "Black and white workspace scene for frontend architecture",
   },
@@ -28,7 +26,6 @@ const featuredArticles: Article[] = [
     excerpt:
       "Notes on using AI as a collaborator while still protecting judgment, craft, and code ownership.",
     tags: ["AI", "Workflow"],
-    readTime: "6 min read",
     imagePosition: "left bottom",
     alt: "Black and white coding workflow illustration",
   },
@@ -39,7 +36,6 @@ const featuredArticles: Article[] = [
     excerpt:
       "Tiny implementation choices that keep interfaces feeling fast without turning every task into a benchmark.",
     tags: ["Performance", "Web"],
-    readTime: "5 min read",
     imagePosition: "right bottom",
     alt: "Black and white abstract web performance visual",
   },
@@ -50,7 +46,6 @@ const featuredArticles: Article[] = [
     excerpt:
       "How clear boundaries, naming, and boring components make product interfaces easier to change later.",
     tags: ["Product", "UI"],
-    readTime: "7 min read",
     imagePosition: "left top",
     alt: "Black and white interface planning scene",
   },
@@ -61,7 +56,6 @@ const featuredArticles: Article[] = [
     excerpt:
       "A reflection on refactoring as a way to make the next change calmer, not just the current code prettier.",
     tags: ["Refactoring", "Engineering"],
-    readTime: "4 min read",
     imagePosition: "right top",
     alt: "Black and white software refactoring visual",
   },
@@ -151,7 +145,6 @@ const generatedArticles: Article[] = fakeArticleTopics.map(
     excerpt:
       "A placeholder article summary for testing the blog card layout, pagination rhythm, and archive density.",
     tags: [firstTag, secondTag],
-    readTime: `${4 + (index % 6)} min read`,
     imagePosition: imagePositions[index % imagePositions.length],
     alt: `Black and white visual for ${title}`,
   }),
