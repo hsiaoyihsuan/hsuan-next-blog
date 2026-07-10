@@ -3,7 +3,7 @@ title: "What are SSE, Server-Sent Events? Example with Express.js"
 date: "2024-09-22"
 excerpt: "An introduction to Server-Sent Events, when to use SSE instead of WebSocket, and how to implement it with Express.js."
 tags: []
-coverImage: "/images/articles/server-sent-events-expressjs/sse-expressjs-cover.svg"
+coverImage: "/images/articles/default/default-article-cover.png"
 ---
 # What are SSE, Server-Sent Events? Example with Express.js
 
