@@ -4,6 +4,7 @@ date: "2024-01-19"
 excerpt: "A collection of PHP basics, setup notes, syntax examples, and common functions for getting comfortable with the language."
 tags: []
 coverImage: "/images/articles/php-notes/php-notes-cover.svg"
+coverImageBackground: "#8892bf"
 ---
 # PHP 使用筆記
 

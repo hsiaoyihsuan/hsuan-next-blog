@@ -3,7 +3,8 @@ title: "Rails ORM 常見的CRUD指令"
 date: "2023-04-04"
 excerpt: "A Rails ActiveRecord CRUD reference covering common create, read, update, and delete commands used in everyday development."
 tags: []
-coverImage: "/images/articles/rails-orm-crud-commands/rails-crud-cover.png"
+coverImage: "/images/articles/shared/rails-svgrepo-com.svg"
+coverImageBackground: "#fff1f0"
 ---
 # Rails ORM 常見的CRUD指令
 

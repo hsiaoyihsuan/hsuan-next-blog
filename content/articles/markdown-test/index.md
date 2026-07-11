@@ -4,6 +4,7 @@ date: "2026-07-10"
 excerpt: "A test article for verifying Markdown rendering, article routing, and local image loading."
 tags: ["Next.js", "Markdown", "Blog"]
 coverImage: "/images/articles/markdown-test/test-image.svg"
+coverImageBackground: "#f5f5f5"
 ---
 
 # Markdown Test Article

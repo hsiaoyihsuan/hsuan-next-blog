@@ -3,7 +3,8 @@ title: "Rails N+1問題 with joins, includes, preload and eager_load"
 date: "2023-06-08"
 excerpt: "A Rails performance note explaining the N+1 query problem and how joins, includes, preload, and eager_load behave."
 tags: []
-coverImage: "/images/articles/rails-n-plus-one-joins-includes-preload-eager-load/rails-n-plus-one-cover.png"
+coverImage: "/images/articles/shared/rails-svgrepo-com.svg"
+coverImageBackground: "#fff1f0"
 ---
 # Rails N+1問題 with joins, includes, preload and eager_load
 

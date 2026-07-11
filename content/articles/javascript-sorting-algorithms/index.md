@@ -3,7 +3,8 @@ title: "Implement 5 common sorting algorithms with JavaScript"
 date: "2024-08-18"
 excerpt: "Implement five common sorting algorithms in JavaScript, with diagrams and notes on time and space complexity."
 tags: []
-coverImage: "/images/articles/javascript-sorting-algorithms/javascript-sorting-cover.svg"
+coverImage: "/images/articles/shared/javascript-logo.svg"
+coverImageBackground: "#f0db4f"
 ---
 # Implement 5 common sorting algorithms with JavaScript
 

@@ -3,7 +3,8 @@ title: "Rails 使用 PostgreSQL"
 date: "2023-04-15"
 excerpt: "A setup note for using PostgreSQL in Rails projects, from local installation to database configuration and common commands."
 tags: []
-coverImage: "/images/articles/rails-postgresql-setup/rails-postgresql-cover.png"
+coverImage: "/images/articles/shared/rails-svgrepo-com.svg"
+coverImageBackground: "#fff1f0"
 ---
 # Rails 使用 PostgreSQL
 

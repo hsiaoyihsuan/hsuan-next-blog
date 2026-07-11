@@ -4,6 +4,7 @@ date: "2024-01-19"
 excerpt: "A practical guide to basic Laravel model relationships, including has one, belongs to, has many, and many-to-many associations."
 tags: []
 coverImage: "/images/articles/laravel-model-relationships/laravel-relationships-cover.svg"
+coverImageBackground: "#fff1f0"
 ---
 # Laravel 關聯 Model
 

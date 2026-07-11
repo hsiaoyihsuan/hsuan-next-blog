@@ -18,6 +18,17 @@ function formatArticleDate(date: string) {
 }
 
 export function ArticleCard({ article, compact = false }: ArticleCardProps) {
+  const coverImage = article.coverImage ?? DEFAULT_COVER_IMAGE;
+  const isSvgCover = coverImage.endsWith(".svg");
+  const coverStyle = {
+    backgroundColor: isSvgCover
+      ? (article.coverImageBackground ?? "#f5f5f5")
+      : undefined,
+    backgroundImage: `url(${coverImage})`,
+    backgroundPosition: article.coverImagePosition ?? "center",
+    backgroundSize: isSvgCover ? "contain" : "cover",
+  };
+
   return (
     <article className="overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <Link
@@ -25,20 +36,20 @@ export function ArticleCard({ article, compact = false }: ArticleCardProps) {
         prefetch={false}
         className="group block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
       >
-        <div className="relative aspect-4/3 bg-neutral-200">
+        <div className="relative aspect-2/1 bg-neutral-200">
           {article.coverImage ? (
             <div
               role="img"
               aria-label={`Cover image for ${article.title}`}
-              className="h-full w-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${article.coverImage})` }}
+              className="h-full w-full bg-no-repeat"
+              style={coverStyle}
             />
           ) : (
             <div
               role="img"
               aria-label={`Default cover image for ${article.title}`}
-              className="h-full w-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${DEFAULT_COVER_IMAGE})` }}
+              className="h-full w-full bg-no-repeat"
+              style={coverStyle}
             />
           )}
         </div>

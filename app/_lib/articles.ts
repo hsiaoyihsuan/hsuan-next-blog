@@ -13,6 +13,8 @@ export type MarkdownArticleMeta = {
   excerpt: string;
   tags: string[];
   coverImage?: string;
+  coverImageBackground?: string;
+  coverImagePosition?: string;
 };
 
 export type MarkdownArticle = MarkdownArticleMeta & {
@@ -25,6 +27,8 @@ type ArticleFrontmatter = {
   excerpt?: unknown;
   tags?: unknown;
   coverImage?: unknown;
+  coverImageBackground?: unknown;
+  coverImagePosition?: unknown;
 };
 
 function assertString(value: unknown, fieldName: string, slug: string) {
@@ -50,13 +54,14 @@ function stripLeadingMarkdownH1(content: string) {
   return content.replace(/^\s*#(?!#)\s+.+(?:\r?\n|$)/, "");
 }
 
+function optionalString(value: unknown) {
+  return typeof value === "string" && value.trim() ? value : undefined;
+}
+
 function parseArticle(slug: string, fileContent: string): MarkdownArticle {
   const { content, data } = matter(fileContent);
   const frontmatter = data as ArticleFrontmatter;
-  const coverImage =
-    typeof frontmatter.coverImage === "string" && frontmatter.coverImage.trim()
-      ? frontmatter.coverImage
-      : undefined;
+  const coverImage = optionalString(frontmatter.coverImage);
 
   return {
     slug,
@@ -65,6 +70,8 @@ function parseArticle(slug: string, fileContent: string): MarkdownArticle {
     excerpt: assertString(frontmatter.excerpt, "excerpt", slug),
     tags: assertStringArray(frontmatter.tags, "tags", slug),
     coverImage,
+    coverImageBackground: optionalString(frontmatter.coverImageBackground),
+    coverImagePosition: optionalString(frontmatter.coverImagePosition),
     content: stripLeadingMarkdownH1(content),
   };
 }
@@ -115,6 +122,8 @@ export async function getAllArticleMetas() {
         excerpt: article.excerpt,
         tags: article.tags,
         coverImage: article.coverImage,
+        coverImageBackground: article.coverImageBackground,
+        coverImagePosition: article.coverImagePosition,
       };
     }),
   );
