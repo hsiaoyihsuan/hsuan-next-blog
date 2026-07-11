@@ -52,12 +52,10 @@ export default async function Home({
               Personal Tech Blog
             </p>
             <h1 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-neutral-950 md:text-6xl">
-              Notes on building thoughtful software.
+              The Tavern of Code
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-neutral-600 md:mt-5 md:text-lg">
-              I write about frontend engineering, AI-assisted development,
-              product craft, and the small decisions that make systems easier to
-              maintain.
+              Stories about software, architecture, and engineering adventures.
             </p>
           </div>
         </div>
@@ -66,14 +64,12 @@ export default async function Home({
           <div className="flex items-end justify-between border-b border-neutral-200 pb-3">
             <h2
               id="latest-articles"
-              className="text-2xl font-semibold text-neutral-950"
-            >
+              className="text-2xl font-semibold text-neutral-950">
               Latest Articles
             </h2>
             <Link
               href="/archive"
-              className="text-sm font-medium text-neutral-500 hover:text-neutral-950"
-            >
+              className="text-sm font-medium text-neutral-500 hover:text-neutral-950">
               View all
             </Link>
           </div>

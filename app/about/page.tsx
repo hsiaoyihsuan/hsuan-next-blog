@@ -94,7 +94,7 @@ export default function About() {
               About Me
             </p>
             <h1 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-neutral-950 md:text-6xl">
-              Yi-Hsuan Hsiao
+              Yi-Hsuan 烜
             </h1>
             <p className="mt-4 text-lg font-medium text-neutral-600">
               Software Engineer
@@ -155,12 +155,43 @@ export default function About() {
 
           <div className="max-w-2xl space-y-5 text-base leading-7 text-neutral-600 md:text-lg">
             <p>
-              A self-introduction will be added here later.
+              嗨，我是 Yi-Hsuan
+              烜，一位喜歡探索新技術的軟體工程師，目前在雲端 POS
+              新創公司參與各種有趣的產品開發。
             </p>
             <p>
-              For now, this page keeps the core profile details and social links
-              ready while the final introduction and page design are still in
-              progress.
+              我的技能點大多投入在後端工程，但偶爾也會施展一些前端魔法。比起單純專精某個領域，我更享受把一個想法從概念一路打磨成真正能被使用的產品。
+            </p>
+            <p>
+              如果要替自己選個職業，大概會是個兼修魔法與劍術的魔劍士（Spellblade）吧。
+            </p>
+            <p>
+              偶爾我也會深入研究某個技術主題，把旅途中的見聞與心得整理成文章，分享在這間《The
+              Tavern of Code》裡。
+            </p>
+            <p>歡迎透過 LinkedIn 找我交流。</p>
+            <p>
+              Hi, I&apos;m Yi-Hsuan, a software engineer and wandering{" "}
+              <strong className="font-semibold text-neutral-950">
+                Spellblade
+              </strong>{" "}
+              exploring the realms of software engineering.
+            </p>
+            <p>
+              My primary weapon is backend engineering, though I occasionally
+              weave frontend magic when the adventure calls for it.
+            </p>
+            <p>
+              I enjoy turning ideas into real products, traveling from
+              whiteboard sketches to production deployments.
+            </p>
+            <p>
+              Every now and then, I return to{" "}
+              <strong className="font-semibold text-neutral-950">
+                The Tavern of Code
+              </strong>{" "}
+              to share stories from recent adventures in software, architecture,
+              and engineering.
             </p>
           </div>
         </div>
