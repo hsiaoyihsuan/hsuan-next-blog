@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hsuan Next Blog",
+  title: "Hsuan Tech Blog",
   description: "A personal tech blog built with Next.js",
 };
 

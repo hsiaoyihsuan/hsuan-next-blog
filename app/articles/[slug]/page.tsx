@@ -33,7 +33,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} | Hsuan Next Blog`,
+    title: `${article.title} | Hsuan Tech Blog`,
     description: article.excerpt,
   };
 }
