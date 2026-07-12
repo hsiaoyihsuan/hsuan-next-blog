@@ -19,6 +19,8 @@ Personally, I think many people didn't fully read the article or understand the 
 
 I recently had a similar experience using Codex (not Claude Code, but a similar idea) to refactor legacy code at work. My biggest takeaway: AI is powerful, but it still needs human judgment, domain knowledge, and clear direction.
 
+## Content
+
 Here's the background. Our company has a Node.js microservice for **Discount**, which supports multiple products such as our online ordering system and POS system. It's much more complex than it might sound. Different discount rules can interact with products, stores, other rules, and various constraints.
 
 Since I'm developing a new **Coupon** feature in 2026, it needs to integrate with the existing Discount feature. However, they were in different repositories. That meant I needed to migrate the Discount service into our new CRM repository built with NestJS.
