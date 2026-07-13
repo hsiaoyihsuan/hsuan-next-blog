@@ -182,7 +182,6 @@ function partition(arr, start, end) {
 
 Quick sort is the fastest among the all sorting algorithms, but it must be optimized to avoid the worst-case scenario, especially when the list is nearly sorted. Unlike merge sort, quick sort use less memory which helps with cache efficiency. However, it's more challenging to implement and is untable across cases.
 
----
 
 ## References
 

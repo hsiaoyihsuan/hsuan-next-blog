@@ -9,8 +9,6 @@ coverImage: "/images/articles/ai-refactoring-legacy-code-real-experience/ai-refa
 
 ![My First Real Experience Using AI to Refactor Legacy Code](/images/articles/ai-refactoring-legacy-code-real-experience/ai-refactoring-legacy-code.png)
 
----
-
 ## Introduction
 
 In February 2026, Anthropic published a [blog post](https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization) about using Claude Code to modernize legacy COBOL systems. After that, many people said the technical moat was disappearing, human experts would be replaced, and even IBM's stock price dropped sharply.

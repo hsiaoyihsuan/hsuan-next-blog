@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   return (
     <main className="min-h-screen bg-neutral-50 pb-28 text-neutral-950 md:pb-16">
       <article className="mx-auto max-w-3xl px-5 pt-8 md:px-8 md:pt-16">
-        <header className="border-b border-neutral-200 pb-8">
+        <header className="border-b border-neutral-200 pb-2">
           <div className="flex flex-wrap gap-2">
             {article.tags.map((tag) => (
               <span
@@ -69,9 +69,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <time dateTime={article.date}>{article.date}</time>
           </div>
 
-          <p className="mt-5 text-base leading-7 text-neutral-600 md:text-lg">
-            {article.excerpt}
-          </p>
         </header>
 
         <MarkdownContent content={article.content} />

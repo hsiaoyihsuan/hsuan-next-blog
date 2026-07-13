@@ -10,7 +10,6 @@ coverImageBackground: "#fff1f0"
 
 資料庫的操作是影響網站效能的重要因素，而在存取資料時幾乎一定會遇到 N+1 問題。本篇文章將簡要探討 includes 的使用時機，以及與其相似的 preload 和 eager_load 方法。此外，我們還會介紹在處理多表格操作時常用的 joins。
 
----
 
 ## 1. 造成 N+1 問題的原因
 我們先想像一個情境，你正在開發商家的訂單系統，其中有兩個 Model，分別是`Customer`與`Order`，`Customer`記載顧客資料，並且每個顧客擁有多筆訂單`Order`
@@ -114,7 +113,6 @@ FROM (
 )
 ```
 
----
 
 References:
 - https://medium.com/@jinghua.shih/rails-activerecord-%E6%95%88%E8%83%BD%E5%84%AA%E5%8C%96-%E4%B8%8A-%E9%97%9C%E8%81%AF%E6%9F%A5%E8%A9%A2-75ca79f510b3ruby-on-rails-switch-from-sqlite3-to-postgres-590009645c25

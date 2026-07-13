@@ -17,7 +17,6 @@ Rails 預設的資料庫是 Sqlite，如欲使用較為專業的開源資料庫 
 3. 重新啟動 Terminal
 4. 查看版本`$ postgres --version`或`$ psql --version`
 
----
 
 ## 在 Rails 專案建立 PostgreSQL 資料庫
 
@@ -93,7 +92,6 @@ production:
 1. 執行`$ rails db:migrate`
 2. 執行`$ rails server`
 
----
 
 ## 資料庫終端機其餘操作
 

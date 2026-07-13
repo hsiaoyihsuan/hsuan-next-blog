@@ -8,7 +8,6 @@ tags: ["Docker", "NestJS"]
 
 This article provide a straightforward guide to dockerizing NestJS application for both develpoment and production environments.
 
----
 ## Dockerfile for Development
 First, let's create a `Dockerfile.dev` for the development environment within our NestJS repository:
 ```Dockerfile

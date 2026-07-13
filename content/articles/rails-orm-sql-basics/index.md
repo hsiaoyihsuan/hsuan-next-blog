@@ -11,7 +11,6 @@ coverImageBackground: "#fff1f0"
 儘管Rails開發者可以透過 ActiveRecord 簡單地操作資料庫資源，但仍然需要了解基本的 SQL 語法。以下是常見 ORM 指令的翻譯，可以幫助你真正理解背後的運作原理。
 較複雜的資料庫關係語法（例如：includes、join）將不在條列於本文中，我們將在另一篇文章中探討這些內容。
 
----
 
 ## Create
 - create:
@@ -26,7 +25,6 @@ Book.save
 INSERT INTO books(name, author, intro, price, updated_at) VALUES ('學習Rails', 'Eddie', '學習Rails好幫手', 100, '2023...')
 ```
 
----
 ## Read
 
 - **all:**
@@ -37,7 +35,6 @@ Book.all
 SELECT * FROM books
 ```
 
----
 - **select or pluck:**
 select 和 pluck 最終得到的資料形式不同，這裡不多做討論，只要知道Rails進一步的處理是在從資料庫抓取資料後，兩者前期的SQL語法沒有不同
 ```ruby
@@ -48,7 +45,6 @@ Book.pluck("name")
 SELECT name FROM books
 ```
 
----
 - **limit or offset:**
 ```ruby
 Book.limit(2)
@@ -59,7 +55,6 @@ SELECT * FROM books LIMIT 2
 SELECT * FROM books LIMIT 2 OFFSET 1
 ```
 
----
 - **find or find_by:**
 find 與 find_by 本質上都是使用 WHERE 進行查詢，但是額外使用 LIMIT 限制最終僅有一筆資料回傳
 ```ruby
@@ -71,7 +66,6 @@ SELECT * FROM books WHERE id = 2 LIMIT 1
 SELECT * FROM books where name = '老人與海' LIMIT 1
 ```
 
----
 - **where:**
 ```ruby
 # where
@@ -106,7 +100,6 @@ SELECT * FROM books WHERE (price = 1000 AND name = '老人與海')
 SELECT * FROM books WHERE id IN (1, 2)
 ```
 
----
 - **like:**
 ```ruby
 Book.where("name like ?", "%與%")
@@ -115,7 +108,6 @@ Book.where("name like ?", "%與%")
 SELECT * FROM books WHERE (name like '與')
 ```
 
----
 - **order:**
 ```ruby
 Book.order(price: :DESC)
@@ -126,7 +118,6 @@ SELECT * FROM books ORDER BY price DESC
 SELECT * FROM books WHERE id IN (1, 2) ORDER BY price ASC
 ```
 
----
 - **first & last:**
 first 和 last 都會先進行排序，再依照數量透過 LIMIT 抓取資料。
 ```ruby
@@ -140,7 +131,6 @@ SELECT * FROM books ORDER BY id DESC LIMIT 1
 SELECT * FROM books ORDER BY id ASC LIMIT 3
 ```
 
----
 ## Update
 - **update:**
 該筆資料更新時，updated_at 也會順帶一起更新
@@ -152,7 +142,6 @@ book4.update(name: "Book4", price: 444)
 UPDATE books SET name = 'Book4', price = 444, updated_at = "2023..." WHERE id = 4
 ```
 
----
 - **update_all:**
 ```ruby
 books = Book.where(id: [1, 2])
@@ -162,7 +151,6 @@ books.update_all(author: "unknown")
 UPDATE books SET author = 'unknown' WHERE id IN (1, 2)
 ```
 
----
 ## Delete
 - **destroy:**
 ```ruby
@@ -173,7 +161,6 @@ book.destroy
 DELETE FROM books where id = 4
 ```
 
----
 - **destroy_all:**
 與 destroy 相同，依照 id 將每筆資料刪除
 ```ruby
@@ -187,7 +174,6 @@ DELETE FROM books WHERE id = 2
 DELETE FROM books WHERE id = 100
 ```
 
----
 
 ## 進階：sum, count, average, maximum, minimum, distinct
 ```ruby
@@ -208,7 +194,6 @@ SELECT MIN(price) FROM books
 SELECT DISTINCT(price) FROM books
 ```
 
----
 
 ## 結語
 

@@ -9,7 +9,6 @@ coverImage: "/images/articles/how-oidc-builds-on-oauth2/oidc-builds-on-oauth2.pn
 
 ![How OIDC Builds on OAuth2](/images/articles/how-oidc-builds-on-oauth2/oidc-builds-on-oauth2.png)
 
----
 
 ## Introduction
 

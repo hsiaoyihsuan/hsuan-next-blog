@@ -7,13 +7,11 @@ coverImage: "/images/articles/dynamodb-one-to-many-many-to-many/dynamodb-relatio
 ---
 # One-to-Many and Many-to-Many in DynamoDB: A Guide with Simple Steps
 
+![4 OAuth2 Grant Types](/images/articles/dynamodb-one-to-many-many-to-many/dynamodb-relationships-cover.png)
+
 ## 1. Introduction
 
 I had to design a DynamoDB schema to support both one-to-many and many-to-many relationships in my company’s invoice center. Coming from an RDBMS background, it took me about a week to really understand how to model these types of relationships in a NoSQL environment. There are several ways to approach it, and in this article, I’ll show you one of the most common patterns for handling relationships in DynamoDB.
-
-![4 OAuth2 Grant Types](/images/articles/dynamodb-one-to-many-many-to-many/dynamodb-relationships-cover.png)
-
----
 
 ## 2. Content
 
@@ -139,7 +137,6 @@ ExpressionAttributeValues: {
 }
 ```
 
----
 
 ## 3. Conclusion
 

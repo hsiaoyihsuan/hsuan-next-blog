@@ -10,7 +10,6 @@ coverImageBackground: "#fff1f0"
 
 Laravel 關聯性Model基礎操作：belongs_to, has_one, has_many, many to many
 
----
 
 ## 1. 一對一關係 has_one
 
@@ -226,7 +225,6 @@ $b2->authors()->detach($a2->id); // remove relation
 $b1->authors;
 $a1->books;
 ```
----
 
 ## References
 - https://laravel.com/docs/8.x/eloquent-relationships

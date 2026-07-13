@@ -126,7 +126,6 @@ tcp46      0      0  *.3000                 *.*                    LISTEN
 ## Conclusion
 Server-Sent Events provide a simple, unidirectional method for streaming real-time updates from the server to the client over HTTP. It’s easier to implement compared to WebSocket, especially for scenarios where the server only needs to push updates.
 
----
 
 ## References
 

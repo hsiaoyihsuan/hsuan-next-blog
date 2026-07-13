@@ -8,13 +8,11 @@ coverImageBackground: "#ffffff"
 ---
 # 4 OAuth2 Grant Types: Which One Should Developers Choose?
 
+![4 OAuth2 Grant Types](/images/articles/oauth2-grant-types-for-developers/oauth2-grant-types.svg)
+
 ## 1. Introduction
 
 Are you confused about the type of OAuth2 you should be using? Or do you not even know that there are several grant types in the OAuth2 protocol? Here’s a quick guide to help you understand the differences between them and determine which one you should use.
-
-![4 OAuth2 Grant Types](/images/articles/oauth2-grant-types-for-developers/oauth2-grant-types.svg)
-
----
 
 ## 2. 4 Authorization Grant Types
 
@@ -42,7 +40,6 @@ The **client credentials grant** is used for **server-to-server authentication**
 
 This grant type is **only suitable** for machine-to-machine communication.
 
----
 
 ## 3. Conclusion
 

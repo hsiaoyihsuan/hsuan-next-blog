@@ -10,7 +10,6 @@ coverImageBackground: "#8892bf"
 
 PHP (Hypertext Prepocessor) 超文字預處理器，為直譯式的程式語言，可嵌入在HTML中使用。這裡記錄了PHP基礎語法與常見的函數。
 
----
 
 ## 1. 環境安裝與設定
 下載PHP的方式：
@@ -38,7 +37,6 @@ $ echo $PATH # 前面的指令優先級較高
 $ php -S 127.0.0.1:8000 # 運行index.php
 ```
 
----
 
 ## 2. PHP基礎語法
 PHP使用`<?php`、`?>`作為開頭與結尾：
@@ -582,7 +580,6 @@ use Home\Kitchen\Table as T;
 $table = new T();
 ```
 
----
 
 ## 4. PHP 常見函數與使用情境
 ### 4.1 Number & Math

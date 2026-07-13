@@ -51,7 +51,6 @@ ex: "012"[-100]; // undefined
 ex: "012"[100]; // undefined
 ```
 
----
 
 **合併字串 Merge strings:**
 
@@ -70,7 +69,6 @@ ex: "Hi" + ", " + "my love!" // "Hi, my love!"
 
 ```
 
----
 
 **字串替換 String replacement:**
 
@@ -93,7 +91,6 @@ str.trim()
 ex:" Hello world! ".trim() // "Hello world!"
 ```
 
----
 
 **刪除或改變特定字元 Delete/Change char in string:**
 
@@ -109,13 +106,11 @@ return this.slice(0, index) + replacement + this.slice(index + 1);
 };
 ```
 
----
 
 **字串迴圈 String loop:**
 
 可以對字串使用一般的 while、for 迴圈，但考量到字串無法直接修改，還是建議先轉換成矩陣後再使用矩陣內建的迴圈方法，操作上較為靈活。
 
----
 
 **其他字串操作 Other string manipulations:**
 
@@ -142,7 +137,6 @@ str.charCodeAt(index);
 ex: "Apple".charCodeAt(0); // 65
 ```
 
----
 
 ## 2. Number 使用方法
 
@@ -161,7 +155,6 @@ ex: String(3.14); // "3.14"
 ex: "" + 3.14; // "3.14"
 ```
 
----
 
 **每ㄧ位數字轉矩陣 Number to array by digit:**
 
@@ -175,7 +168,6 @@ ex: Array.from((3.14).toString()); // ["3", ".", "1", "4"]
 ex: Array.from(3.14); // [] 轉換失敗
 ```
 
----
 
 **數字運算 Number computing:**
 
@@ -209,7 +201,6 @@ let minutes = Math.floor((secondes / 60) % 60);
 let rest_seconds = Math.floor(seconds % 60);
 ```
 
----
 
 **轉換成數字是否成功 Conversion to number:**
 
@@ -224,7 +215,6 @@ Number("$100"); // NaN
 isNaN(Number("$100")); // true
 ```
 
----
 
 ## 3. Array 使用方法
 
@@ -245,7 +235,6 @@ arr.filter((element,index,array)=>{}) // return new array
 arr.reduce((accumulator,currentValue,currentIndex,array)=>{},initialValue) // return one value
 ```
 
----
 
 **找尋矩陣中的元素 Find within array:**
 
@@ -277,7 +266,6 @@ ex: ["cat", "dog"].includes("dog") // true
 ex: ["cat", "dog"].includes("lion") // false
 ```
 
----
 
 **矩陣轉字串 Convert array to string:**
 
@@ -297,7 +285,6 @@ ex: ["Hi", ["my", "love!"]].toString(); //"Hi,my,love!"
 ex: String(["Hi", ["my", "love!"]]); //"Hi,my,love!"
 ```
 
----
 
 **合併矩陣 Merge arrays:**
 
@@ -316,7 +303,6 @@ arr1.push(...arr2);
 ex: [1, 2].push(...[3, 4]); // [1,2,3,4]
 ```
 
----
 
 **矩陣元素的插入與刪除 Insertion and deletion of elements in array:**
 
@@ -336,7 +322,6 @@ months.splice(4, 1, "May"); // Replaces 1 element at index 4
 console.log(months); // ["Jan", "Feb", "March", "April", "May"]
 ```
 
----
 
 **矩陣元素排列 Sort array:**
 
@@ -353,13 +338,11 @@ arr.sort((a, b) => b - a);
 console.log(arr); // [ 100, 50, 33, 20, 1, 0 ]
 ```
 
----
 
 **矩陣複製 Array duplication:**
 
 矩陣的複製牽涉到 JavaScript 數值傳遞的原理，除了常見的 call by value、call by reference，還有特殊的 call by sharing，這會是一項需要另外探討的問題，這裡不做詳細討論，不過至少要知道`let newArr = oldArr`不是正確的複製方法。
 
----
 
 **其他矩陣操作 Other array manipulations:**
 
@@ -376,7 +359,6 @@ ex: Array.isArray([1, 2]); // true
 ex: Array.isArray("1,2"); // false
 ```
 
----
 
 ## 4. 操作範例 Demonstration
 
@@ -406,7 +388,6 @@ Output:
 ]
 ```
 
----
 
 Q: 每個單字的開頭大寫
 
@@ -418,7 +399,6 @@ str = splitStr.join(" ");
 console.log(str); // Cat Dog Duck Lion Rabbit Snake
 ```
 
----
 
 Q: 顯示產品項目的種類
 
