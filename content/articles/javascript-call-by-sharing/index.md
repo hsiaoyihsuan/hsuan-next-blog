@@ -2,7 +2,7 @@
 title: "JavaScript 中的 Call by sharing"
 date: "2023-04-03"
 excerpt: "A simple explanation of call by value, call by reference, and call by sharing in JavaScript, with memory diagrams and examples."
-tags: []
+tags: ["JavaScript", "Programming Language"]
 coverImage: "/images/articles/shared/javascript-logo.svg"
 coverImageBackground: "#f0db4f"
 ---

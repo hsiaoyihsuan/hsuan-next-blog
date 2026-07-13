@@ -2,7 +2,7 @@
 title: "JavaScript 矩陣, 字串, 數字 實用語法集"
 date: "2023-03-22"
 excerpt: "A practical JavaScript note covering common string, array, and number operations for day-to-day problem solving."
-tags: []
+tags: ["JavaScript", "Programming Language"]
 coverImage: "/images/articles/shared/javascript-logo.svg"
 coverImageBackground: "#f0db4f"
 ---

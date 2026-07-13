@@ -2,7 +2,7 @@
 title: "One-to-Many and Many-to-Many in DynamoDB: A Guide with Simple Steps"
 date: "2025-05-12"
 excerpt: "A step-by-step guide to modeling one-to-many and many-to-many relationships in DynamoDB using access patterns and keys."
-tags: []
+tags: ["DynamoDB", "NoSQL", "AWS"]
 coverImage: "/images/articles/dynamodb-one-to-many-many-to-many/dynamodb-relationships-cover.png"
 ---
 # One-to-Many and Many-to-Many in DynamoDB: A Guide with Simple Steps

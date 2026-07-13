@@ -2,7 +2,7 @@
 title: "Building an Identity Server and CRM System: My 2025 Engineering Recap"
 date: "2026-01-05"
 excerpt: "A recap of building a production Identity Server and CRM service in 2025, from replacing AWS Cognito to designing reward-point workflows that could keep evolving."
-tags: []
+tags: ["Diary"]
 coverImage: "/images/articles/building-identity-server-crm-2025-recap/identity-server-crm-2025-recap.png"
 ---
 # Building an Identity Server and CRM System: My 2025 Engineering Recap

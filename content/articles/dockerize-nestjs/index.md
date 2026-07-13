@@ -2,7 +2,7 @@
 title: "How to Dockerize NestJS"
 date: "2024-05-14"
 excerpt: "A straightforward guide to Dockerizing a NestJS application for development and production with optimized image builds."
-tags: []
+tags: ["Docker", "NestJS"]
 ---
 # How to Dockerize NestJS
 

@@ -2,7 +2,7 @@
 title: "My First Real Experience Using AI to Refactor Legacy Code"
 date: "2026-04-19"
 excerpt: "A real engineering story about using AI to refactor legacy code, improve structure, and make an old system easier to maintain."
-tags: []
+tags: ["AI", "Refactoring"]
 coverImage: "/images/articles/ai-refactoring-legacy-code-real-experience/ai-refactoring-legacy-code.png"
 ---
 # My First Real Experience Using AI to Refactor Legacy Code

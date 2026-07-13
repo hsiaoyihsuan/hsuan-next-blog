@@ -2,7 +2,7 @@
 title: "Ruby 實體方法 vs 類別方法"
 date: "2023-04-23"
 excerpt: "A quick Ruby note explaining the difference between instance methods and class methods, including how self works in each context."
-tags: []
+tags: ["Ruby", "Programming Language"]
 coverImage: "/images/articles/shared/ruby-svgrepo-com.svg"
 coverImageBackground: "#fff1f0"
 ---

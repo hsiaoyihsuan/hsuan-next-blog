@@ -2,7 +2,7 @@
 title: "4 OAuth2 Grant Types: Which One Should Developers Choose?"
 date: "2025-03-01"
 excerpt: "A guide to the four common OAuth2 grant types and when developers should use each flow in real applications."
-tags: []
+tags: ["OAuth2", "Authentication"]
 coverImage: "/images/articles/oauth2-grant-types-for-developers/oauth2-grant-types.svg"
 coverImageBackground: "#ffffff"
 ---

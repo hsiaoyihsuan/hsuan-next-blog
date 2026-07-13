@@ -2,7 +2,7 @@
 title: "How OIDC Builds on OAuth2: A Simple Guide to Avoid Confusion"
 date: "2025-04-03"
 excerpt: "A simple guide to how OpenID Connect extends OAuth2 with authentication, ID tokens, claims, and discovery metadata."
-tags: []
+tags: ["OIDC", "OAuth2", "Authentication"]
 coverImage: "/images/articles/how-oidc-builds-on-oauth2/oidc-builds-on-oauth2.png"
 ---
 # How OIDC Builds on OAuth2: A Simple Guide to Avoid Confusion

@@ -2,7 +2,7 @@
 title: "Rails Polymorphic"
 date: "2023-10-12"
 excerpt: "A Rails note introducing polymorphic associations and how to model comments that can belong to different resource types."
-tags: []
+tags: ["Rails", "ORM"]
 coverImage: "/images/articles/shared/rails-svgrepo-com.svg"
 coverImageBackground: "#fff1f0"
 ---

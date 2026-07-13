@@ -2,7 +2,7 @@
 title: "5 Benefits of Using AWS S3 Multipart Upload Every Software Engineer Should Know"
 date: "2025-02-14"
 excerpt: "A developer-focused overview of AWS S3 multipart upload and why it helps with large file uploads, retries, and performance."
-tags: []
+tags: ["AWS", "S3"]
 coverImage: "/images/articles/aws-s3-multipart-upload-benefits/aws-s3-multipart-upload.svg"
 coverImageBackground: "#ffffff"
 ---

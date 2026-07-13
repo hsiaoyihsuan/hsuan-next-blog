@@ -2,7 +2,7 @@
 title: "Rails 基礎 ORM 的 SQL 語法"
 date: "2023-06-04"
 excerpt: "A comparison of common Rails ActiveRecord operations with the SQL statements they generate behind the scenes."
-tags: []
+tags: ["Rails", "SQL", "ORM"]
 coverImage: "/images/articles/shared/rails-svgrepo-com.svg"
 coverImageBackground: "#fff1f0"
 ---
