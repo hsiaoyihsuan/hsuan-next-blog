@@ -80,7 +80,7 @@ export default function About() {
         <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-lg bg-neutral-200 shadow-sm md:mx-0">
           <Image
             src="/images/about/profile.jpeg"
-            alt="Portrait of Yi-Hsuan Hsiao"
+            alt="Portrait of Hsuan Hsiao"
             fill
             priority
             sizes="224px"
@@ -94,7 +94,7 @@ export default function About() {
               About Me
             </p>
             <h1 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-neutral-950 md:text-6xl">
-              Yi-Hsuan 烜
+              Hsuan Hsiao
             </h1>
             <p className="mt-4 text-lg font-medium text-neutral-600">
               Software Engineer
@@ -155,9 +155,7 @@ export default function About() {
 
           <div className="max-w-2xl space-y-5 text-base leading-7 text-neutral-600 md:text-lg">
             <p>
-              嗨，我是 Yi-Hsuan
-              烜，一位喜歡探索新技術的軟體工程師，目前在雲端 POS
-              新創公司參與各種有趣的產品開發。
+              嗨，我是 Hsuan，一位喜歡探索新技術的軟體工程師，目前在雲端 POS 新創公司參與各種有趣的產品開發。
             </p>
             <p>
               我的技能點大多投入在後端工程，但偶爾也會施展一些前端魔法。比起單純專精某個領域，我更享受把一個想法從概念一路打磨成真正能被使用的產品。
@@ -171,7 +169,7 @@ export default function About() {
             </p>
             <p>歡迎透過 LinkedIn 找我交流。</p>
             <p>
-              Hi, I&apos;m Yi-Hsuan, a software engineer and wandering{" "}
+              Hi, I&apos;m Hsuan, a software engineer and wandering{" "}
               <strong className="font-semibold text-neutral-950">
                 Spellblade
               </strong>{" "}
